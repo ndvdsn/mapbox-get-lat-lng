@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+    <title>Maps</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: helvetica, arial, sans-serif;
+        }
+        
+        #map {
+            height: 100vh;
+            width: 100vw
+        }
+        #guide {
+            background: rgb(255, 255, 255);
+            color: black;
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 11px;
+            line-height: 18px;
+            border-radius: 3px;
+            width: 300px;
+            height: auto;
+            /* display: block; */
+            /* font-family: 'Open Sans', sans-serif; */
+            }
+
+        .coordinates {
+            background: #fff;
+            color: #000;
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 20px;
+            border-radius: 3px;
+            flex-direction: row;
+            }
+
+        .coordinates > div {
+            padding: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            margin: 4px;
+        }
+
+
+       
+    </style>
+
+    <script src="singlepin.js" defer></script>
+</head>
+<body>
+    <div id='map'></div>
+    <div id="guide" class="guide">
+        Click anywhere in the map to set your business location. 
+        This only has to be as precise as you want it to be.
+        Once you've dropped a pin your latitude and longitude will be shown below. 
+        Copy and paste these into your Chamber settings. 
+    </div>
+    <div id="coordinates" class="coordinates"></div>
+    <div id="comment" class="comment">
+            </section>
+            
+    </div>
+
+    
+</body>
+</html>
